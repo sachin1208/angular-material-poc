@@ -1,16 +1,66 @@
-  <mat-accordion>
-    <mat-expansion-panel hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-icon>menu</mat-icon>
-          Users
-        </mat-panel-title>
-        <mat-panel-description>
-          <mat-icon>account_circle</mat-icon>
-         Jhon Doe
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <p>This is the primary content of the panel.</p>
-    </mat-expansion-panel>
-  </mat-accordion>
-  
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon class="example-color">menu</mat-icon>
+    </button>
+    <span>Users</span>
+    <span class="example-spacer"></span>
+
+    <mat-icon>account_circle</mat-icon>
+
+    <span>Jhon doe</span>
+
+  </mat-toolbar>
+</p>
+
+<div class="card-1">
+  <h2>User List</h2>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef> Gender </th>
+      <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef> Address </th>
+      <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+    </ng-container>
+
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-icon (click)="callDummy(element)" class="custom-pointer">edit</mat-icon>
+        <mat-icon (click)="callDummy(element)" class="custom-pointer">delete</mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+<div class="card-2">
+  <h1>Progress</h1>
+  <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+  <div><h3 class="custom-inline-class">Male users :</h3> <h3 class="custom-inline-class">{{maleUsers}}</h3></div>
+  <div><h3 class="custom-inline-class">Female users :</h3> <h3 class="custom-inline-class">{{femaleUsers}}</h3></div>
+</div>

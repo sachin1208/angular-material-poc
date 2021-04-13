@@ -7,22 +7,74 @@
 
 
 .mat-expansion-panel-header, .mat-expansion-panel-header:focus, .mat-expansion-panel-header:hover { 
-    background-color: #00a99d;
+  background-color: #00a99d;
 }
 
 p{
-    background-color: white;
+  background-color: white;
 }
 
 
 .container {
-    display: flex; /* or inline-flex */
-    flex-flow: row wrap;
-    justify-content: space-around;
-    /* background-color: #00a99d; */
-  }
+  display: flex; /* or inline-flex */
+  flex-flow: row wrap;
+  justify-content: space-around;
+  /* background-color: #00a99d; */
+}
 
-  .container > * {
-    padding: 10px;
-    flex: 1 100%;
-  }
+.container > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+  
+.mat-toolbar.mat-primary {
+  background: #00a99d;
+  color: #fff;
+}
+
+.example-icon{
+  background-color: #00a99d;
+  border: none;
+}
+
+.example-color{
+  color: #fff;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-cell, .mat-footer-cell, .mat-header-cell {
+  color: black;
+}
+
+.mat-table{
+  background-color: #fff;
+}
+
+.custom-pointer{
+  cursor: pointer;
+}
+
+.card-1{
+  display: inline-block;
+  width: 75%;
+  position: relative;
+  padding: 1em;
+}
+
+.card-2{
+  display: inline-block;
+  width:25%;
+  position: absolute;
+  padding: 1em;
+}
+
+.custom-inline-class{
+  display: inline;
+}
