@@ -1,4 +1,4 @@
-export interface PeriodicElement {
+export interface User {
     name: string;
     email: string;
     gender: string;

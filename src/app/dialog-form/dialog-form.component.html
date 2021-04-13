@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>Dialog with elements</h2>
+<!-- <mat-dialog-content class="mat-typography"> -->
+    <div class="">
+        <form [formGroup]="options">
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Name">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput></textarea>
+                </mat-form-field>
+            </p>
+            <h4>
+                <label>Gender </label>
+                <mat-radio-group [formControl]="floatLabelControl">
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                </mat-radio-group>
+            </h4>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Date Of Birth </mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-dialog-actions>
+                    <button mat-button mat-dialog-close>Close</button>
+                    <button mat-button [mat-dialog-close]="true"  cdkFocusInitial>Submit</button>
+                  </mat-dialog-actions>
+            </p>
+        </form>
+    </div>
+<!-- </mat-dialog-content> -->

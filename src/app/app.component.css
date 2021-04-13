@@ -78,3 +78,7 @@ table {
 .custom-inline-class{
   display: inline;
 }
+.mat-dialog-container{
+  background: #fff;
+  color: #424242;
+}

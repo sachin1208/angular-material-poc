@@ -49,8 +49,8 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef> Action </th>
       <td mat-cell *matCellDef="let element">
-        <mat-icon (click)="callDummy(element)" class="custom-pointer">edit</mat-icon>
-        <mat-icon (click)="callDummy(element)" class="custom-pointer">delete</mat-icon>
+        <mat-icon (click)="openDialog(element)" mat-raised-button class="custom-pointer">edit</mat-icon>
+        <mat-icon (click)="callDummy(element)" mat-raised-button class="custom-pointer">delete</mat-icon>
       </td>
     </ng-container>
 
