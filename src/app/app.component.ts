@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MachineTest';
+  expanded:boolean=false;
+
+  toggle(){
+    this.expanded=!this.expanded
+  }
 }

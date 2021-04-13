@@ -1,0 +1,38 @@
+[
+    {
+        "name":"rakesh Roshan",
+        "email":"rakesh@gmail.com",
+        "gender":"Male",
+        "address":"Pune, Maharashtra, India"
+    },
+    {
+        "name":"Nitin Shinde",
+        "email":"nitin@gmail.com",
+        "gender":"Male",
+        "address":"Mumbai, Maharashtra, India"
+    },
+    {
+        "name":"Rajesh Roshan",
+        "email":"rajesh@gmail.com",
+        "gender":"Male",
+        "address":"Mumbai, Maharashtra, India"
+    },
+    {
+        "name":"Anmol Shinde",
+        "email":"anmol@gmail.com",
+        "gender":"Male",
+        "address":"Pune, Maharashtra, India"
+    },
+    {
+        "name":"Kavita Rathod",
+        "email":"kavita@gmail.com",
+        "gender":"Female",
+        "address":"Mumbai, Maharashtra, India"
+    },
+    {
+        "name":"Shweta Phutane",
+        "email":"shweta@gmail.com",
+        "gender":"Female",
+        "address":"Mumbai, Maharashtra, India"
+    }
+]

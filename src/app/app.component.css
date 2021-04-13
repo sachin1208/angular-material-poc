@@ -1,0 +1,28 @@
+
+.container .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+  flex: none;
+}
+
+
+.mat-expansion-panel-header, .mat-expansion-panel-header:focus, .mat-expansion-panel-header:hover { 
+    background-color: #00a99d;
+}
+
+p{
+    background-color: white;
+}
+
+
+.container {
+    display: flex; /* or inline-flex */
+    flex-flow: row wrap;
+    justify-content: space-around;
+    /* background-color: #00a99d; */
+  }
+
+  .container > * {
+    padding: 10px;
+    flex: 1 100%;
+  }
