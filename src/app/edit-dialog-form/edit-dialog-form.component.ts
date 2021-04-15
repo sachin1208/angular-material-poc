@@ -5,14 +5,14 @@ import { DialogData } from '../app.component';
 
 @Component({
   selector: 'app-dialog-form',
-  templateUrl: './dialog-form.component.html',
-  styleUrls: ['./dialog-form.component.css']
+  templateUrl: './edit-dialog-form.component.html',
+  styleUrls: ['./edit-dialog-form.component.css']
 })
-export class DialogFormComponent implements OnInit {
+export class EditDialogFormComponent implements OnInit {
   options: FormGroup;
   hideRequiredControl = new FormControl(false);
   floatLabelControl = new FormControl('auto');
-  constructor( fb: FormBuilder, public dialogRef: MatDialogRef<DialogFormComponent>,
+  constructor( fb: FormBuilder, public dialogRef: MatDialogRef<EditDialogFormComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) { 
       this.options = fb.group({
         hideRequired: this.hideRequiredControl,

@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AppServiceService } from './app-service.service';
 import { User } from './app-types';
-import { DialogFormComponent } from './dialog-form/dialog-form.component';
+import { DeleteDialogFormComponent } from './delete-dialog-form/delete-dialog-form.component';
+import { EditDialogFormComponent } from './edit-dialog-form/edit-dialog-form.component';
 
 
 const ELEMENT_DATA: User[] = [];
@@ -40,11 +41,23 @@ export class AppComponent {
                 error => this.errorMessage = error);   
   }
 
-  openDialog(element:any): void {
-    const dialogRef = this.dialog.open(DialogFormComponent, {
+  openEditDialog(element:any): void {
+    const dialogRef = this.dialog.open(EditDialogFormComponent, {
       data: {name: this.name, animal: this.animal},
       width: "1220px",
       height:"600px"
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+
+  openDeleteDialog(element:any): void {
+    const dialogRef = this.dialog.open(DeleteDialogFormComponent, {
+      data: {name: element.name, gender: element.gender},
+      width: "400px"
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -58,7 +71,12 @@ export class AppComponent {
   }
  
   callDummy(element:User){
-    this.appService.deleteElement(element);   
+    this.appService.updateElement(element).subscribe(
+      result=>{
+        console.log(result);
+        
+      }
+    )
   }
 
   checkUsers(products:User[]){
