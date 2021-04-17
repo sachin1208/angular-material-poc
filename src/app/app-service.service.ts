@@ -13,7 +13,7 @@ export class AppServiceService {
   constructor(private httpClient: HttpClient) { }
 
   fetchData(): Observable<User[]> {
-    return this.httpClient.get<User[]>('./assets/sample.json').pipe(
+    return this.httpClient.get<User[]>('http://localhost:3000/users').pipe(
       catchError(this.handleError));
 
   }
@@ -21,7 +21,7 @@ export class AppServiceService {
   deleteElement(element: any): Observable<any> {
     // return this.httpClient.post<User[]>('./assets/sample.json', element).pipe(
     //   catchError(this.handleError));
-    const url = `./assets/sample.json/${element.name}`; // DELETE api/heroes/42
+    const url = `http://localhost:3000/users/${element.id}`; // DELETE api/heroes/42
     return this.httpClient.delete(url)
       .pipe(
         catchError(this.handleError)
@@ -32,7 +32,7 @@ export class AppServiceService {
   updateElement(element: any) {
     // return this.httpClient.put<User[]>('./assets/sample.json', element).pipe(
     //   catchError(this.handleError));
-    return this.httpClient.post('./assets/sample.json', element);
+    return this.httpClient.post('http://localhost:3000/users', element);
 
   }
 

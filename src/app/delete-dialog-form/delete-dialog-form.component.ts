@@ -1,6 +1,7 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, Output, EventEmitter } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AppServiceService } from '../app-service.service';
+import { User } from '../app-types';
 import { DialogData } from '../app.component';
 
 @Component({
@@ -10,17 +11,15 @@ import { DialogData } from '../app.component';
 })
 export class DeleteDialogFormComponent implements OnInit {
 
+  @Output() newItemEvent = new EventEmitter<User[]>();
+
   constructor(public dialogRef: MatDialogRef<DeleteDialogFormComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData, private appService:AppServiceService) { }
 
   ngOnInit(): void {
   }
   onNoClick(): void {
-    this.appService.deleteElement(this.data).subscribe((res)=>{
-      debugger;
-      console.log(res);
-      
-    });
+    this.appService.deleteElement(this.data).subscribe();
     this.dialogRef.close();
   }
 

@@ -1,40 +1,52 @@
 {
-    "users":[
+    "users": [
         {
-            "name":"rakesh Roshan",
-            "email":"rakesh@gmail.com",
-            "gender":"Male",
-            "address":"Pune, Maharashtra, India"
+            "id": "101",
+            "name": "rakesh Roshan",
+            "email": "rakesh@gmail.com",
+            "gender": "Male",
+            "address": "Pune, Maharashtra, India",
+            "dob": "22/11/1995"
         },
         {
-            "name":"Nitin Shinde",
-            "email":"nitin@gmail.com",
-            "gender":"Male",
-            "address":"Mumbai, Maharashtra, India"
+            "id": "102",
+            "name": "Nitin Shinde",
+            "email": "nitin@gmail.com",
+            "gender": "Male",
+            "address": "Mumbai, Maharashtra, India",
+            "dob": "23/11/1995"
         },
         {
-            "name":"Rajesh Roshan",
-            "email":"rajesh@gmail.com",
-            "gender":"Male",
-            "address":"Mumbai, Maharashtra, India"
+            "id": "103",
+            "name": "Rajesh Roshan",
+            "email": "rajesh@gmail.com",
+            "gender": "Male",
+            "address": "Mumbai, Maharashtra, India",
+            "dob": "24/11/1995"
         },
         {
-            "name":"Anmol Shinde",
-            "email":"anmol@gmail.com",
-            "gender":"Male",
-            "address":"Pune, Maharashtra, India"
+            "id": "104",
+            "name": "Anmol Shinde",
+            "email": "anmol@gmail.com",
+            "gender": "Male",
+            "address": "Pune, Maharashtra, India",
+            "dob": "25/11/1995"
         },
         {
-            "name":"Kavita Rathod",
-            "email":"kavita@gmail.com",
-            "gender":"Female",
-            "address":"Mumbai, Maharashtra, India"
+            "id": "105",
+            "name": "Kavita Rathod",
+            "email": "kavita@gmail.com",
+            "gender": "Female",
+            "address": "Mumbai, Maharashtra, India",
+            "dob": "26/11/1995"
         },
         {
-            "name":"Shweta Phutane",
-            "email":"shweta@gmail.com",
-            "gender":"Female",
-            "address":"Mumbai, Maharashtra, India"
+            "id": "106",
+            "name": "Shweta Phutane",
+            "email": "shweta@gmail.com",
+            "gender": "Female",
+            "address": "Mumbai, Maharashtra, India",
+            "dob": "27/11/1995"
         }
     ]
 }
